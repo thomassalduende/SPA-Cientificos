@@ -1,0 +1,27 @@
+# control del manejo de toda la app
+
+language: node_js
+cache:
+  directories:
+    - ~/.npm
+node_js:
+  '12'
+git:
+  depth: 3
+script:
+  yarn build
+deploy: 
+  provider: pages
+  edge: true
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN 
+  local_dir: dist/
+  target_branch: gh-pages
+  commit_message: "Deply to GitHub Pages"
+  on:
+    branch: master
+
+
+
+
+
