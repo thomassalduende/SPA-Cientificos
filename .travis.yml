@@ -1,4 +1,5 @@
 # control del manejo de toda la app
+# thomas salduende
 
 language: node_js
 cache:
