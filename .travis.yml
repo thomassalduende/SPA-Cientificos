@@ -1,16 +1,17 @@
 # control del manejo de toda la app
 # thomas salduende
+#travis.yml
 
 language: node_js
 cache:
   directories:
-    - ~/.npm
+      - ~/.npm
 node_js:
-  - '12'
+    - '12'
 git:
   depth: 3
 script:
-  - yarn build
+    - yarn build
 deploy: 
   provider: pages
   edge: true,
@@ -21,8 +22,7 @@ deploy:
   target-branch: gh-pages
   commit_message: "Deploy Release"
   on:
-    branch: master
-
+      branch: master
 
 
 
